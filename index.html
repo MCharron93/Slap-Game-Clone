@@ -11,14 +11,19 @@
 <body>
 	<header class="container-fluid">
 		<div class="row text-center">
-			<div class="col-12">Welcome to Pokemon Battler!</div>
+			<div class="col-12">
+				<h1>Welcome to Pokemon Battler!</h1>
+			</div>
 		</div>
 	</header>
 
 	<main class="container-fluid bg-beach">
 		<div class="row text-center">
-			<div class="col-12">
-				<span id="hits"></span>
+			<div class="col-6">
+				<span id="pikachu-hits"></span>
+			</div>
+			<div class="col-6">
+				<span id="dratini-hits"></span>
 			</div>
 		</div>
 		<div class="row">
@@ -28,8 +33,17 @@
 			<div class="col-5 p-3">
 				<span id="name-pika"></span>
 				<span id="health-pika"></span>
-				<div class="image-fluid img-pikachu p-4"></div>
-				<div class="p-4">
+				<div class="image-fluid img-pikachu d-flex align-self-end p-4"></div>
+			</div>
+			<div class="col-5">
+				<span id="name-dratini"></span>
+				<span id="health-dratini"></span>
+				<div class="img-fluid img-dratini"></div>
+			</div>
+		</div>
+		<div class="row justify-content-around">
+			<div class="col-5">
+				<div class="d-flex justify-content-center p-4">
 					<button id="thunder" onclick="useThunder()">Thunder</button>
 					<button id="quick" onclick="useQuickAttack()">Quick Attack</button>
 					<button id="wave" onclick="useThunderWave()">Thunder Wave</button>
@@ -37,10 +51,7 @@
 				</div>
 			</div>
 			<div class="col-5">
-				<span id="name-dratini"></span>
-				<span id="health-dratini"></span>
-				<div class="img-fluid img-dratini"></div>
-				<div>
+				<div class="d-flex justify-content-center p-4">
 					<button id="rage" onclick="useDragonRage()">Dragon Rage</button>
 					<button id="wrap" onclick="useWrap()">Wrap</button>
 					<button id="tail" onclick="useDragonTail()">Dragon Tail</button>
@@ -51,11 +62,9 @@
 	</main>
 
 	<footer class="container-fluid">
-		<div class="row">
+		<div class="row text-center">
 			<div class="col-12">
-				<button class="btn btn-warning" onclick="slap()">Slap!</button>
-				<button class="btn btn-success" onclick="punch()">Punch!</button>
-				<button class="btn btn-danger" onclick="kick()">Kick!</button>
+				<h2>Who Will Win? The Type Match-Up Matters, but Size Does Not!</h2>
 			</div>
 	</footer>
 
