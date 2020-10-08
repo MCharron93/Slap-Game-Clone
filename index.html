@@ -10,27 +10,46 @@
 
 <body>
 	<header class="container-fluid">
-		<div class="row">
+		<div class="row text-center">
+			<div class="col-12">Welcome to Pokemon Battler!</div>
+		</div>
+	</header>
+
+	<main class="container-fluid bg-beach">
+		<div class="row text-center">
 			<div class="col-12">
 				<span id="hits"></span>
 			</div>
 		</div>
-	</header>
-	<main class="container-fluid">
 		<div class="row">
-			<div class="col-6">
+			<div class="col-12 spacer"></div>
+		</div>
+		<div class="row justify-content-around">
+			<div class="col-5 p-3">
 				<span id="name-pika"></span>
 				<span id="health-pika"></span>
-				<img src="200px-025Pikachu.png" alt="pikachu">
-				<button id="thunder" onclick="giveTMThunder()">Give Thunder</button>
+				<div class="image-fluid img-pikachu p-4"></div>
+				<div class="p-4">
+					<button id="thunder" onclick="useThunder()">Thunder</button>
+					<button id="quick" onclick="useQuickAttack()">Quick Attack</button>
+					<button id="wave" onclick="useThunderWave()">Thunder Wave</button>
+					<button id="ball" onclick="useElectroBall()">Electro Ball</button>
+				</div>
 			</div>
-			<div class="col-6">
-				<span id="name"></span>
-				<span id="health"></span>
-				<img src="200px-Dratini_anime.webp" alt="dratini">
+			<div class="col-5">
+				<span id="name-dratini"></span>
+				<span id="health-dratini"></span>
+				<div class="img-fluid img-dratini"></div>
+				<div>
+					<button id="rage" onclick="useDragonRage()">Dragon Rage</button>
+					<button id="wrap" onclick="useWrap()">Wrap</button>
+					<button id="tail" onclick="useDragonTail()">Dragon Tail</button>
+					<button id="beam" onclick="useHyperBeam()">Hyper Beam</button>
+				</div>
 			</div>
 		</div>
 	</main>
+
 	<footer class="container-fluid">
 		<div class="row">
 			<div class="col-12">

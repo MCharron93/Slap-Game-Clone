@@ -3,3 +3,35 @@ body { min-height: 100vh; display: flex; flex-direction: column; }
 header{height: 7vh; } 
 main{flex-grow: 1;} 
 footer{ height: 7vh;}
+
+*{
+  outline: 1px solid grey;
+
+}
+
+.spacer{
+  height: 25vh;
+}
+
+.bg-beach{
+  background-image: url(beach-background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-pikachu{
+  background-image: url(transparent-pika-gif.gif);
+  height: 30vh;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.img-dratini{
+  background-image: url(transparent-dratini-gif.gif);
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}

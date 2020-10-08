@@ -1,8 +1,46 @@
 let pikachuAttacks = {
   thunder: {
     name: 'Thunder',
-    modifier: 2,
+    modifier: 50,
     description: 'BZZZzzzzZZzzz'
+  },
+  quick: {
+    name: 'Quick Attack',
+    modifier: 1,
+    description: 'ZOOM'
+  },
+  wave: {
+    name: 'Thunder Wave',
+    modifier: 1,
+    description: 'ZZZZZZZZZZZZZZ!'
+  },
+  ball:{
+    name: 'Electro Ball',
+    modifier: 10,
+    description: 'Catch!'
+  }
+}
+
+let dratiniAttacks = {
+  rage: {
+    name: 'Dragon Rage',
+    modifier: 5,
+    description: "RRRAAWRRR!"
+  },
+  wrap: {
+    name: 'Wrap',
+    modifier: 1,
+    description: 'kshasghks'
+  },
+  tail: {    
+    name: 'Dragon Tail',
+  modifier: 1,
+  description: 'Yeehaw'
+  },
+  beam: {
+    name: 'Wrap',
+    modifier: 100,
+    description: '1-Hit KO!'
   }
 }
 
@@ -14,7 +52,8 @@ let dratini = {
     kick: 11,
     slap: 2
   },
-  hits: 0
+  hits: 0,
+  dratiniAttacks: []
 }
 
 let pikachu = {
@@ -30,33 +69,31 @@ let pikachu = {
 }
 
 
-//let health = 100
-//let target = "pikachu"
-//let hits = 0
-
 // Note reduce health by 1 
 // Alert health
 
-function slap() {
-  pikachu.health -= 1 + addMods()
-  pikachu.hits++
-  update()
-}
+// function slap() {
+//   pikachu.health -= 1 
+//   pikachu.hits++
+//   update()
+// }
 
-function punch() {
-  pikachu.health -= 5 + addMods()
-  pikachu.hits++
-  update()
-}
+// function punch() {
+//   pikachu.health -= 5 
+//   pikachu.hits++
+//   update()
+// }
 
-function kick() {
-  pikachu.health -= 10 + addMods()
-  pikachu.hits++
-  update()
-}
+// function kick() {
+//   pikachu.health -= 10 
+//   pikachu.hits++
+//   update()
+// }
 
-function giveTMThunder() {
+function useThunder() {
   pikachu.pikachuAttacks.push(pikachuAttacks.thunder)
+  dratini.health -= 10 + addMods()
+  update()
 }
 
 function addMods() {
@@ -73,15 +110,20 @@ function addMods() {
 
 // Note update interface when value of health changes
 function update() {
-  let healthElem = document.getElementById("health-pika")
-  healthElem.innerText = pikachu.health.toString()
+  let pikachuHealthElem = document.getElementById("health-pika")
+  pikachuHealthElem.innerText = pikachu.health.toString()
 
-  let nameElem = document.getElementById("name-pika")
-  nameElem.innerText = pikachu.name
+  let pikachuNameElem = document.getElementById("name-pika")
+  pikachuNameElem.innerText = pikachu.name
 
   let hitsElem = document.getElementById("hits")
   hitsElem.innerText = pikachu.hits.toString()
 
+  let dratiniHealthElem = document.getElementById("health-dratini")
+  dratiniHealthElem.innerText = dratini.health.toString()
+
+  let dratiniNameElem = document.getElementById("name-dratini")
+  dratiniNameElem.innerText = dratini.name
 }
 
 update()
