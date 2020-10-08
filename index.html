@@ -12,24 +12,33 @@
 	<header class="container-fluid">
 		<div class="row">
 			<div class="col-12">
-				<span id="health"></span>
+				<span id="hits"></span>
 			</div>
 		</div>
 	</header>
-<main class="container-fluid">
-	<div class="row">
-		<div class="col-12">
-			Insert Image here
+	<main class="container-fluid">
+		<div class="row">
+			<div class="col-6">
+				<span id="name-pika"></span>
+				<span id="health-pika"></span>
+				<img src="200px-025Pikachu.png" alt="pikachu">
+				<button id="thunder" onclick="giveTMThunder()">Give Thunder</button>
+			</div>
+			<div class="col-6">
+				<span id="name"></span>
+				<span id="health"></span>
+				<img src="200px-Dratini_anime.webp" alt="dratini">
+			</div>
 		</div>
-	</div>
-</main>
-<footer class="container-fluid">
-	<div class="row">
-		<div class="col-12">
-			<button class="btn btn-warning" onclick="slap()">Slap!</button>
-		</div>
-	</div>
-</footer>
+	</main>
+	<footer class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<button class="btn btn-warning" onclick="slap()">Slap!</button>
+				<button class="btn btn-success" onclick="punch()">Punch!</button>
+				<button class="btn btn-danger" onclick="kick()">Kick!</button>
+			</div>
+	</footer>
 
 	<script src="game.js"></script>
 </body>
